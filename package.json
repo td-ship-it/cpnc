@@ -1,0 +1,14 @@
+{
+  "name": "cpnc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cấp phát nước cất – Trường Dược, ĐH Y Dược TP.HCM (Cloudflare Workers + Google Apps Script + Google Sheet)",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "secret": "wrangler secret put APPS_SCRIPT_URL"
+  },
+  "devDependencies": {
+    "wrangler": "^4.20.0"
+  }
+}

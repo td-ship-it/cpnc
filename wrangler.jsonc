@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cpnc",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api", "/api/*"]
+  },
+  "workers_dev": true,
+  "observability": { "enabled": true }
+  // Địa chỉ chạy: https://cpnc.truongduoc.workers.dev
+  // APPS_SCRIPT_URL: đặt bằng `npx wrangler secret put APPS_SCRIPT_URL`
+  // hoặc trên Dashboard: Workers & Pages → cpnc → Settings → Variables and Secrets.
+}

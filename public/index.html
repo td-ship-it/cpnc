@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cấp phát nước cất · Trường Dược</title>
+<meta name="description" content="Giấy đề nghị cấp nước cất điện tử và theo dõi tồn kho nước cất của Trường Dược, Đại học Y Dược TP.HCM.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M12 3h8v2h-1v7l7 12a3 3 0 0 1-2.6 4.5H8.6A3 3 0 0 1 6 24l7-12V5h-1z' fill='%230a6a86'/%3E%3Cpath d='M9 22h14l2 3.5a1 1 0 0 1-.9 1.5H7.9a1 1 0 0 1-.9-1.5z' fill='%2356bfdc'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Serif:wght@400;700&family=Roboto+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="loading-bar" id="loadingBar" hidden></div>
+
+<div id="landing"></div>
+
+<div class="app" id="appwrap" hidden>
+  <header class="top">
+    <div>
+      <div class="org">Đại học Y Dược TP.HCM · Trường Dược</div>
+      <h1>Cấp phát nước cất</h1>
+    </div>
+    <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+      <div class="userbar" id="userbar"></div>
+      <div class="usermenu">
+        <button class="btn ghost sm" type="button" data-act="account">Tài khoản</button>
+        <button class="btn ghost sm" type="button" data-act="logout">Đăng xuất</button>
+      </div>
+      <button class="btn primary" id="btnNew" type="button">＋ Lập giấy đề nghị</button>
+    </div>
+  </header>
+  <nav class="tabs" role="tablist" id="tabs">
+    <button class="tab" role="tab" data-tab="overview" type="button">Tổng quan</button>
+    <button class="tab" role="tab" data-tab="requests" type="button">Giấy đề nghị</button>
+    <button class="tab" role="tab" data-tab="stock" type="button">Sổ kho</button>
+    <button class="tab" role="tab" data-tab="admin" type="button" hidden>Quản trị hệ thống</button>
+  </nav>
+  <main id="view"></main>
+</div>
+
+<div class="overlay" id="overlay" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true"></div></div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
